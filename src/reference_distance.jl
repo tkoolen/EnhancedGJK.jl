@@ -12,7 +12,7 @@ end
 
 function normal(points)
     span = GeometryTypes.edgespan(Simplex(points))
-    normalize(cross(Point(column(span, 1)), Point(column(span, 2))))
+    normalize(cross(Point(span[:, 1]), Point(span[:, 2])))
 end
 
 function planefit{N, T}(points::NTuple{3, Point{N, T}})
